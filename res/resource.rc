@@ -1,0 +1,38 @@
+#include <windows.h>
+
+// DLL version information.
+VS_VERSION_INFO    VERSIONINFO
+FILEVERSION        3,0,0,0
+PRODUCTVERSION     3,0,0,0
+FILEFLAGSMASK      VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+  FILEFLAGS        VS_FF_DEBUG | VS_FF_PRERELEASE
+#else
+  FILEFLAGS        0
+#endif
+FILEOS             VOS_NT_WINDOWS32
+FILETYPE           VFT_DLL
+FILESUBTYPE        VFT2_UNKNOWN
+BEGIN
+  BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080904b0"
+        BEGIN
+#ifdef __MINGW32__
+            VALUE "FileDescription", "freeglut MinGW build, by Transmission Zero."
+#else
+            VALUE "FileDescription", "freeglut MSVC build, by Transmission Zero."
+#endif
+            VALUE "FileVersion", "3, 0, 0, 0"
+            VALUE "InternalName", "freeglut.dll"
+            VALUE "LegalCopyright", "©1999–2015 Pawel W. Olszta"
+            VALUE "OriginalFilename", "freeglut.dll"
+            VALUE "ProductName", "Freeglut OpenGL Utility Toolkit"
+            VALUE "ProductVersion", "3, 0, 0, 0"
+        END
+    END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x809, 1200
+  END
+END
